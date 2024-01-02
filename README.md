@@ -1,44 +1,29 @@
-# React Todo App with API (complete)
+# React Todo App with API
 
-It is the third part of the React Todo App with API.
+> Here is [ToDoApp DEMO](https://BetterSol.github.io/react_todo-app-with-api/)
 
-Take your code implemented for [Add and Delete](https://github.com/mate-academy/react_todo-app-add-and-delete)
-and implement the ability to toggle and rename todos.
+React Todo App brings enhanced features for a seamless task management experience. Now, in addition to adding and deleting tasks, users can effortlessly toggle and rename todos with a user-friendly interface.
 
-> Here is [the working example](https://mate-academy.github.io/react_todo-app-with-api/)
+The app includes:
 
-## Toggling a todo status
+## Todo Toggling
 
-Toggle the `completed` status on `TodoStatus` change:
+- A loader overlay elegantly covers todos while awaiting API responses.
+- Instant status change upon successful toggling.
+- Informs users with a notification in case of API errors.
 
-- covered the todo with a loader overlay while waiting for API response;
-- the status should be changed on success;
-- show the `Unable to update a todo` notification in case of API error.
+## Toggle All Feature
 
-Add the ability to toggle the completed status of all the todos with the `toggleAll` checkbox:
+- The 'toggleAll' button activates only if all todos are completed.
+- Toggle the status for all todos with a single click.
+- Efficiently manages API requests, sending only for changed todos.
 
-- `toggleAll` button should have `active` class only if all the todos are completed;
-- `toggleAll` click changes its status to the opposite one, and sets this new status to all the todos;
-- it should work the same as several individual updates of the todos which statuses were actually changed;
-- do send requests for the todos that were not changed;
+## Todo Renaming
 
-## Renaming a todo
-
-Implement the ability to edit a todo title on double click:
-
-- show the edit form instead of the title and remove button;
-- saves changes on the form submit (just press `Enter`);
-- save changes when the field loses focus (`onBlur`);
-- if the new title is the same as the old one just cancel editing;
-- cancel editing on `Esс` key `keyup` event;
-- if the new title is empty delete the todo the same way the `x` button does it;
-- if the title was changed show the loader while waiting for the API response;
-- update the todo title on success;
-- show `Unable to update a todo` in case of API error;
-- or the deletion error message if we tried to delete the todo.
-
-## Instructions
-
-- Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline).
-- Use the [React TypeScript cheat sheet](https://mate-academy.github.io/fe-program/js/extra/react-typescript).
-- Replace `<your_account>` with your Github username in the [DEMO LINK](https://BetterSol.github.io/react_todo-app-with-api/) and add it to the PR description.
+- You can edit to-do titles with ease through double-clicking.
+- Intuitive edit form replaces the title and remove button.
+- Changes are saved on form submit (Enter key) or onBlur.
+- Cancels editing on Esc key press or if the new title matches the old one.
+Allows deletion if the new title is empty, akin to the 'x' button.
+User-friendly loader displays during API responses for title updates.
+Communicates errors, whether updating or deleting todos.
